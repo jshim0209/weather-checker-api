@@ -6,15 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="WeatherCheckerApiCommon" />
-        <module name="WeatherCheckerApiService" />
+        <module name="weather-checker-api-service" />
+        <module name="weather-checker-api-common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="WeatherCheckerApiCommon" target="17" />
+      <module name="WeatherCheckerApiProject" target="1.5" />
+      <module name="WeatherCheckerApiService" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="WeatherCheckerApiCommon" options="-parameters" />
       <module name="WeatherCheckerApiService" options="-parameters" />
+      <module name="weather-checker-api-common" options="-parameters" />
+      <module name="weather-checker-api-service" options="-parameters" />
     </option>
   </component>
 </project>
