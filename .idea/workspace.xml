@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3614ebf-5d2f-498a-9d6f-eb8aedaff1f5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiCommon/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiCommon/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +49,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.LocationRepositoryTests.testAddSuccess">
     <configuration name="WeatherCheckerApiServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.WeatherCheckerApiServiceApplication" />
       <module name="weather-checker-api-service" />
@@ -67,8 +63,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LocationRepositoryTests.testAddSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weather-checker-api-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jshimdev0209.weatherchecker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker" />
+      <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.LocationRepositoryTests" />
+      <option name="METHOD_NAME" value="testAddSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LocationRepositoryTests.testAddSuccess" />
         <item itemvalue="Application.WeatherCheckerApiServiceApplication" />
       </list>
     </recent_temporary>
@@ -83,5 +96,10 @@
       <updated>1721341340340</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WeatherCheckerApiProject$LocationRepositoryTests_testAddSuccess.ic" NAME="LocationRepositoryTests.testAddSuccess Coverage Results" MODIFIED="1721414627817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.jshimdev0209.weatherchecker.*</FILTER>
+    </SUITE>
   </component>
 </project>
