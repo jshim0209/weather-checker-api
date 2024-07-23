@@ -1,7 +1,6 @@
-package com.jshimdev0209.weatherchecker;
+package com.jshimdev0209.weatherchecker.location;
 
 import com.jshimdev0209.weatherchecker.common.Location;
-import com.jshimdev0209.weatherchecker.location.LocationRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -27,6 +26,7 @@ public class LocationRepositoryTests {
         location.setRegionName("New York");
         location.setCountryCode("US");
         location.setCountryName("United States of America");
+        location.setEnabled(true);
 
         Location savedLocation = locationRepository.save(location);
 

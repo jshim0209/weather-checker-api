@@ -1,6 +1,7 @@
 package com.jshimdev0209.weatherchecker.location;
 
 import com.jshimdev0209.weatherchecker.common.Location;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +21,7 @@ public class LocationApiController {
     }
 
     @PostMapping
-    public ResponseEntity<Location> addLocation(@RequestBody Location location) {
+    public ResponseEntity<Location> addLocation(@RequestBody @Valid Location location) {
         Location addedLocation = locationService.addLocation(location);
         URI uri = URI.create("/v1/locations/" + location.getCode());
 
