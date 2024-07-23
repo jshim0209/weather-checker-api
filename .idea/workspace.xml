@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3614ebf-5d2f-498a-9d6f-eb8aedaff1f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiCommon/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiCommon/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherCheckerApiCommon/src/main/java/com/jshimdev0209/weatherchecker/common/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiCommon/src/main/java/com/jshimdev0209/weatherchecker/common/Location.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/LocationRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationApiControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationApiControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationRepositoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocationApiControllerTests.testAddReturn201Created" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LocationApiControllerTests.testListLocationsReturn200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather-checker-api-service" />
       <extension name="coverage">
         <pattern>
@@ -98,13 +99,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
       <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationApiControllerTests" />
-      <option name="METHOD_NAME" value="testAddReturn201Created" />
+      <option name="METHOD_NAME" value="testListLocationsReturn200" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocationApiControllerTests.testAddReturn400BadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LocationApiControllerTests.testListLocationsReturn204NoContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather-checker-api-service" />
       <extension name="coverage">
         <pattern>
@@ -114,13 +115,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
       <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationApiControllerTests" />
-      <option name="METHOD_NAME" value="testAddReturn400BadRequest" />
+      <option name="METHOD_NAME" value="testListLocationsReturn204NoContent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocationRepositoryTests.testAddSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LocationRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather-checker-api-service" />
       <extension name="coverage">
         <pattern>
@@ -130,8 +131,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
       <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationRepositoryTests" />
-      <option name="METHOD_NAME" value="testAddSuccess" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,10 +139,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.WeatherCheckerApiServiceApplication" />
+        <item itemvalue="JUnit.LocationApiControllerTests.testListLocationsReturn200" />
+        <item itemvalue="JUnit.LocationApiControllerTests.testListLocationsReturn204NoContent" />
+        <item itemvalue="JUnit.LocationRepositoryTests" />
         <item itemvalue="JUnit.LocationApiControllerTests" />
-        <item itemvalue="JUnit.LocationApiControllerTests.testAddReturn201Created" />
-        <item itemvalue="JUnit.LocationRepositoryTests.testAddSuccess" />
-        <item itemvalue="JUnit.LocationApiControllerTests.testAddReturn400BadRequest" />
       </list>
     </recent_temporary>
   </component>

@@ -3,6 +3,8 @@ package com.jshimdev0209.weatherchecker.location;
 import com.jshimdev0209.weatherchecker.common.Location;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LocationService {
 
@@ -15,5 +17,9 @@ public class LocationService {
 
     public Location addLocation(Location location) {
         return locationRepository.save(location);
+    }
+
+    public List<Location> listLocations() {
+        return locationRepository.findUntrashedLocations();
     }
 }

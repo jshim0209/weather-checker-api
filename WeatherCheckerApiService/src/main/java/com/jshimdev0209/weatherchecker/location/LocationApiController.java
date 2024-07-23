@@ -3,12 +3,10 @@ package com.jshimdev0209.weatherchecker.location;
 import com.jshimdev0209.weatherchecker.common.Location;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/v1/locations")
@@ -26,5 +24,14 @@ public class LocationApiController {
         URI uri = URI.create("/v1/locations/" + location.getCode());
 
         return ResponseEntity.created(uri).body(addedLocation);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Location>> listLocations() {
+        List<Location> locations = locationService.listLocations();
+        if (locations.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(locations);
     }
 }

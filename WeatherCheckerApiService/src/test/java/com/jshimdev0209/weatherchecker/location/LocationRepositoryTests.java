@@ -8,6 +8,8 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
@@ -33,5 +35,14 @@ public class LocationRepositoryTests {
         assertThat(savedLocation).isNotNull();
         assertThat(savedLocation.getCode()).isEqualTo("NYC_USA");
 
+    }
+
+    @Test
+    public void testFindUntrashedSuccess() {
+        List<Location> locations = locationRepository.findUntrashedLocations();
+
+        assertThat(locations).isNotEmpty();
+
+        locations.forEach(System.out::println);
     }
 }
