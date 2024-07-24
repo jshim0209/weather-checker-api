@@ -27,11 +27,20 @@ public class LocationApiController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Location>> listLocations() {
+    public ResponseEntity<?> listLocations() {
         List<Location> locations = locationService.listLocations();
         if (locations.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(locations);
+    }
+
+    @GetMapping("/{code}")
+    public ResponseEntity<?> getLocation(@PathVariable("code") String code) {
+        Location location = locationService.getLocation(code);
+        if (location == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(location);
     }
 }

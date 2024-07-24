@@ -111,4 +111,42 @@ public class LocationApiControllerTests {
                 .andExpect(jsonPath("$[1].city_name", is("Los Angeles")))
                 .andDo(print());
     }
+
+    @Test
+    public void testGetLocationReturn405MethodNotAllowed() throws Exception {
+        String requestURI = END_POINT_PATH + "/ABCDEF";
+
+        mockMvc.perform(post(requestURI))
+                .andExpect(status().isMethodNotAllowed())
+                .andDo(print());
+    }
+
+    @Test
+    public void testGetLocationReturn404NotFound() throws Exception {
+        String requestURI = END_POINT_PATH + "/ABCDEF";
+
+        mockMvc.perform(get(requestURI))
+                .andExpect(status().isNotFound())
+                .andDo(print());
+    }
+
+    @Test
+    public void testGetLocationReturn200OK() throws Exception {
+        String code = "LACA_USA";
+        String requestURI = END_POINT_PATH + "/" + code;
+
+        Location location = new Location();
+        location.setCode("LACA_USA");
+        location.setCityName("Los Angeles");
+        location.setRegionName("California");
+        location.setCountryCode("US");
+        location.setCountryName("United States of America");
+        location.setEnabled(true);
+
+        Mockito.when(locationService.getLocation(code)).thenReturn(location);
+
+        mockMvc.perform(get(requestURI))
+                .andExpect(status().isOk())
+                .andDo(print());
+    }
 }

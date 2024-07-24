@@ -45,4 +45,21 @@ public class LocationRepositoryTests {
 
         locations.forEach(System.out::println);
     }
+
+    @Test
+    public void testGetLocationNotFound() {
+        String code = "ABCD";
+        Location location = locationRepository.findByCode(code);
+
+        assertThat(location).isNull();
+    }
+
+    @Test
+    public void testGetLocationFound() {
+        String code = "NYC_USA";
+        Location location = locationRepository.findByCode(code);
+
+        assertThat(location).isNotNull();
+        assertThat(location.getCode()).isEqualTo(code);
+    }
 }

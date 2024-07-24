@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e3614ebf-5d2f-498a-9d6f-eb8aedaff1f5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiCommon/src/main/java/com/jshimdev0209/weatherchecker/common/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiCommon/src/main/java/com/jshimdev0209/weatherchecker/common/Location.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationApiControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationApiControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationRepositoryTests.java" afterDir="false" />
     </list>
@@ -31,18 +31,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2jRE9Z5WaYCbBvIHV8Hu8PmnfdZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,9 +41,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.WeatherCheckerApiServiceApplication.executor": "Run",
+    "JUnit.LocationApiControllerTests.testGetLocationReturn200OK.executor": "Debug",
+    "JUnit.LocationApiControllerTests.testGetLocationReturn404NotFound.executor": "Run",
+    "JUnit.LocationApiControllerTests.testGetLocationReturn405MethodNotAllowed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -60,7 +57,7 @@
       <recent name="com.jshimdev0209.weatherchecker.location" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WeatherCheckerApiServiceApplication">
+  <component name="RunManager" selected="JUnit.LocationApiControllerTests.testGetLocationReturn200OK">
     <configuration name="WeatherCheckerApiServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.WeatherCheckerApiServiceApplication" />
       <module name="weather-checker-api-service" />
@@ -74,7 +71,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocationApiControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LocationApiControllerTests.testGetLocationReturn200OK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather-checker-api-service" />
       <extension name="coverage">
         <pattern>
@@ -84,28 +81,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
       <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationApiControllerTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LocationApiControllerTests.testListLocationsReturn200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="weather-checker-api-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jshimdev0209.weatherchecker.location.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
-      <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationApiControllerTests" />
-      <option name="METHOD_NAME" value="testListLocationsReturn200" />
+      <option name="METHOD_NAME" value="testGetLocationReturn200OK" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocationApiControllerTests.testListLocationsReturn204NoContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LocationApiControllerTests.testGetLocationReturn404NotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather-checker-api-service" />
       <extension name="coverage">
         <pattern>
@@ -115,13 +97,29 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
       <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationApiControllerTests" />
-      <option name="METHOD_NAME" value="testListLocationsReturn204NoContent" />
+      <option name="METHOD_NAME" value="testGetLocationReturn404NotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocationRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LocationApiControllerTests.testGetLocationReturn405MethodNotAllowed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weather-checker-api-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jshimdev0209.weatherchecker.location.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
+      <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationApiControllerTests" />
+      <option name="METHOD_NAME" value="testGetLocationReturn405MethodNotAllowed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocationRepositoryTests.testGetLocationFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather-checker-api-service" />
       <extension name="coverage">
         <pattern>
@@ -131,18 +129,19 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
       <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationRepositoryTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testGetLocationFound" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LocationApiControllerTests.testGetLocationReturn200OK" />
         <item itemvalue="Application.WeatherCheckerApiServiceApplication" />
-        <item itemvalue="JUnit.LocationApiControllerTests.testListLocationsReturn200" />
-        <item itemvalue="JUnit.LocationApiControllerTests.testListLocationsReturn204NoContent" />
-        <item itemvalue="JUnit.LocationRepositoryTests" />
-        <item itemvalue="JUnit.LocationApiControllerTests" />
+        <item itemvalue="JUnit.LocationApiControllerTests.testGetLocationReturn404NotFound" />
+        <item itemvalue="JUnit.LocationApiControllerTests.testGetLocationReturn405MethodNotAllowed" />
+        <item itemvalue="JUnit.LocationRepositoryTests.testGetLocationFound" />
       </list>
     </recent_temporary>
   </component>
@@ -156,6 +155,17 @@
       <updated>1721341340340</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationApiController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WeatherCheckerApiProject$LocationApiControllerTests.ic" NAME="LocationApiControllerTests Coverage Results" MODIFIED="1721678412706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
