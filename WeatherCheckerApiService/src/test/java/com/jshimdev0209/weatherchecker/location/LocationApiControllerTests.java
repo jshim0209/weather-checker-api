@@ -205,4 +205,28 @@ public class LocationApiControllerTests {
                 .andExpect(jsonPath("$.city_name", is("New York City")))
                 .andDo(print());
     }
+
+    @Test
+    public void testDeleteReturn404NotFound() throws Exception {
+        String code = "DELHI_IN";
+        String requestURI = END_POINT_PATH + "/" + code;
+
+        Mockito.doThrow(LocationNotFoundException.class).when(locationService).deleteLocation(code);
+
+        mockMvc.perform(delete(requestURI))
+                .andExpect(status().isNotFound())
+                .andDo(print());
+    }
+
+    @Test
+    public void testDeleteReturn204NoContent() throws Exception {
+        String code = "LACA_USA";
+        String requestURI = END_POINT_PATH + "/" + code;
+
+        Mockito.doNothing().when(locationService).deleteLocation(code);
+
+        mockMvc.perform(delete(requestURI))
+                .andExpect(status().isNoContent())
+                .andDo(print());
+    }
 }

@@ -1,11 +1,13 @@
 package com.jshimdev0209.weatherchecker.location;
 
 import com.jshimdev0209.weatherchecker.common.Location;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class LocationService {
 
     private LocationRepository locationRepository;
@@ -43,5 +45,13 @@ public class LocationService {
         locationInDB.setEnabled(locationInRequest.isEnabled());
 
         return locationRepository.save(locationInDB);
+    }
+
+    public void deleteLocation(String code) throws LocationNotFoundException {
+        Location location = locationRepository.findByCode(code);
+        if (location == null) {
+            throw new LocationNotFoundException("No location found with the given code: " + code);
+        }
+        locationRepository.trashByCode(code);
     }
 }
