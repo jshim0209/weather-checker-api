@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3614ebf-5d2f-498a-9d6f-eb8aedaff1f5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiCommon/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiCommon/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherCheckerApiCommon/src/main/java/com/jshimdev0209/weatherchecker/common/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiCommon/src/main/java/com/jshimdev0209/weatherchecker/common/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/ErrorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/ErrorDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/main/java/com/jshimdev0209/weatherchecker/location/LocationApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationApiControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationApiControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherCheckerApiService/src/test/java/com/jshimdev0209/weatherchecker/location/LocationRepositoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,9 @@
     "JUnit.LocationApiControllerTests.testValidateRequestBodyAllFieldsInvalid.executor": "Run",
     "JUnit.LocationApiControllerTests.testValidateRequestBodyLocationCode.executor": "Run",
     "JUnit.LocationApiControllerTests.testValidateRequestBodyLocationCodeLength.executor": "Run",
+    "JUnit.LocationRepositoryTests.testAddRealtimeWeatherData.executor": "Run",
     "JUnit.LocationRepositoryTests.testTrashSuccess.executor": "Run",
+    "JUnit.RealtimeWeatherRepositoryTest.testUpdateRealtimeWeather.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -72,7 +74,7 @@
       <recent name="com.jshimdev0209.weatherchecker.location" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LocationApiControllerTests.testValidateRequestBodyAllFieldsInvalid">
+  <component name="RunManager" selected="JUnit.RealtimeWeatherRepositoryTest.testUpdateRealtimeWeather">
     <configuration name="WeatherCheckerApiServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="DB_USERNAME" value="postgres" />
@@ -91,22 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocationApiControllerTests.testDeleteReturn204NoContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="weather-checker-api-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jshimdev0209.weatherchecker.location.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
-      <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationApiControllerTests" />
-      <option name="METHOD_NAME" value="testDeleteReturn204NoContent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LocationApiControllerTests.testValidateRequestBodyAllFieldsInvalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather-checker-api-service" />
       <extension name="coverage">
@@ -118,22 +104,6 @@
       <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
       <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationApiControllerTests" />
       <option name="METHOD_NAME" value="testValidateRequestBodyAllFieldsInvalid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LocationApiControllerTests.testValidateRequestBodyLocationCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="weather-checker-api-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jshimdev0209.weatherchecker.location.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
-      <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationApiControllerTests" />
-      <option name="METHOD_NAME" value="testValidateRequestBodyLocationCode" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,20 +125,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LocationRepositoryTests.testAddRealtimeWeatherData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weather-checker-api-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jshimdev0209.weatherchecker.location.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.location" />
+      <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.location.LocationRepositoryTests" />
+      <option name="METHOD_NAME" value="testAddRealtimeWeatherData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RealtimeWeatherRepositoryTest.testUpdateRealtimeWeather" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weather-checker-api-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jshimdev0209.weatherchecker.realtime.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jshimdev0209.weatherchecker.realtime" />
+      <option name="MAIN_CLASS_NAME" value="com.jshimdev0209.weatherchecker.realtime.RealtimeWeatherRepositoryTest" />
+      <option name="METHOD_NAME" value="testUpdateRealtimeWeather" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.WeatherCheckerApiServiceApplication" />
+      <item itemvalue="JUnit.LocationRepositoryTests.testAddRealtimeWeatherData" />
+      <item itemvalue="JUnit.RealtimeWeatherRepositoryTest.testUpdateRealtimeWeather" />
       <item itemvalue="JUnit.LocationApiControllerTests.testValidateRequestBodyAllFieldsInvalid" />
-      <item itemvalue="JUnit.LocationApiControllerTests.testValidateRequestBodyLocationCode" />
       <item itemvalue="JUnit.LocationApiControllerTests.testValidateRequestBodyLocationCodeLength" />
-      <item itemvalue="JUnit.LocationApiControllerTests.testDeleteReturn204NoContent" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RealtimeWeatherRepositoryTest.testUpdateRealtimeWeather" />
+        <item itemvalue="JUnit.LocationRepositoryTests.testAddRealtimeWeatherData" />
+        <item itemvalue="Application.WeatherCheckerApiServiceApplication" />
         <item itemvalue="JUnit.LocationApiControllerTests.testValidateRequestBodyAllFieldsInvalid" />
         <item itemvalue="JUnit.LocationApiControllerTests.testValidateRequestBodyLocationCodeLength" />
-        <item itemvalue="JUnit.LocationApiControllerTests.testValidateRequestBodyLocationCode" />
-        <item itemvalue="Application.WeatherCheckerApiServiceApplication" />
-        <item itemvalue="JUnit.LocationApiControllerTests.testDeleteReturn204NoContent" />
       </list>
     </recent_temporary>
   </component>

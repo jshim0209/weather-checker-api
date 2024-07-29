@@ -1,6 +1,7 @@
 package com.jshimdev0209.weatherchecker.location;
 
 import com.jshimdev0209.weatherchecker.common.Location;
+import com.jshimdev0209.weatherchecker.common.RealtimeWeather;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -8,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
+import java.util.Date;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -71,5 +73,30 @@ public class LocationRepositoryTests {
         Location location = locationRepository.findByCode(code);
 
         assertThat(location).isNull();
+    }
+
+    @Test
+    public void testAddRealtimeWeatherData() {
+        String code = "NYC_USA";
+
+        Location location = locationRepository.findByCode(code);
+
+        RealtimeWeather realtimeWeather = location.getRealtimeWeather();
+
+        if (realtimeWeather == null) {
+            realtimeWeather = new RealtimeWeather();
+            realtimeWeather.setLocation(location);
+            location.setRealtimeWeather(realtimeWeather);
+        }
+
+        realtimeWeather.setTemperature(-1);
+        realtimeWeather.setHumidity(30);
+        realtimeWeather.setPrecipitation(40);
+        realtimeWeather.setStatus("Snowy");
+        realtimeWeather.setWindSpeed(15);
+        realtimeWeather.setLastUpdated(new Date());
+
+        Location updatedLocation = locationRepository.save(location);
+        assertThat(updatedLocation.getRealtimeWeather().getLocationCode()).isEqualTo(code);
     }
 }
