@@ -2,6 +2,7 @@ package com.jshimdev0209.weatherchecker.location;
 
 import com.jshimdev0209.weatherchecker.common.Location;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Size;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
