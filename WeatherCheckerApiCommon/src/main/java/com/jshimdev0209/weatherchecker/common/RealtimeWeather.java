@@ -1,13 +1,16 @@
 package com.jshimdev0209.weatherchecker.common;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
 @Entity
 @Table(name = "realtime_weather")
-@Data
+@Getter
+@Setter
 public class RealtimeWeather {
 
     @Id
@@ -20,14 +23,21 @@ public class RealtimeWeather {
 
     private int precipitation;
 
+    @JsonProperty("wind_speed")
     private int windSpeed;
     @Column(length = 50)
     private String status;
 
+    @JsonProperty("last_updated")
     private Date lastUpdated;
 
     @OneToOne
     @JoinColumn(name = "location_code")
     @MapsId
     private Location location;
+
+    public void setLocation(Location location) {
+        this.locationCode = location.getCode();
+        this.location = location;
+    }
 }

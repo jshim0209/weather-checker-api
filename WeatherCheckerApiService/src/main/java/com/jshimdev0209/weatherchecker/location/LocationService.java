@@ -10,7 +10,7 @@ import java.util.List;
 @Transactional
 public class LocationService {
 
-    private LocationRepository locationRepository;
+    private final LocationRepository locationRepository;
 
     public LocationService(LocationRepository locationRepository) {
         super();

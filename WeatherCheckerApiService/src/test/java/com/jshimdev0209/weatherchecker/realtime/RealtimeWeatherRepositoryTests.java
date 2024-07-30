@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Rollback(false)
-public class RealtimeWeatherRepositoryTest {
+public class RealtimeWeatherRepositoryTests {
 
     @Autowired
     private RealtimeWeatherRepository realtimeWeatherRepository;
@@ -35,5 +35,26 @@ public class RealtimeWeatherRepositoryTest {
         RealtimeWeather updatedRealtimeWeather = realtimeWeatherRepository.save(realtimeWeather);
 
         assertThat(updatedRealtimeWeather.getHumidity()).isEqualTo(32);
+    }
+
+    @Test
+    public void testFindByCountryCodeAndCityNotFound() {
+        String countryCode = "JP";
+        String cityName = "Tokyo";
+
+        RealtimeWeather realtimeWeather = realtimeWeatherRepository.findByCountryCodeAndCity(countryCode, cityName);
+
+        assertThat(realtimeWeather).isNull();
+    }
+
+    @Test
+    public void testFindByCountryCodeAndCityFound() {
+        String countryCode = "US";
+        String cityName = "New York City";
+
+        RealtimeWeather realtimeWeather = realtimeWeatherRepository.findByCountryCodeAndCity(countryCode, cityName);
+
+        assertThat(realtimeWeather).isNotNull();
+        assertThat(realtimeWeather.getLocation().getCityName()).isEqualTo(cityName);
     }
 }

@@ -4,12 +4,16 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
+
+import java.util.Objects;
 
 @Entity
 @Table(name = "locations")
-@Data
+@Getter
+@Setter
 public class Location {
 
     @Column(length = 12, nullable = false, unique = true)
@@ -47,5 +51,34 @@ public class Location {
 
     @OneToOne(mappedBy = "location", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
+    @JsonIgnore
     private RealtimeWeather realtimeWeather;
+
+    public Location() {
+    }
+
+    public Location(String cityName, String regionName, String countryName, String countryCode) {
+        this.cityName = cityName;
+        this.regionName = regionName;
+        this.countryName = countryName;
+        this.countryCode = countryCode;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Location location = (Location) o;
+        return enabled == location.enabled && trashed == location.trashed && Objects.equals(code, location.code) && Objects.equals(cityName, location.cityName) && Objects.equals(regionName, location.regionName) && Objects.equals(countryName, location.countryName) && Objects.equals(countryCode, location.countryCode) && Objects.equals(realtimeWeather, location.realtimeWeather);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(code, cityName, regionName, countryName, countryCode, enabled, trashed, realtimeWeather);
+    }
+
+    @Override
+    public String toString() {
+        return cityName + ", " + (regionName != null ? regionName : "") + ", " + countryName;
+    }
 }
